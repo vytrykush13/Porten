@@ -1,0 +1,841 @@
+/*
+font-family: 'Playfair Display', serif;
+*/
+
+@font-face {
+	font-family: "Post No Bills Jaffna";
+	src: url('../fonts/PostNoBillsJaffna-Bold.eot');
+	src: local('☺'), url('../fonts/PostNoBillsJaffna-Bold.woff') format('woff'), url('../fonts/PostNoBillsJaffna-Bold.ttf') format('truetype'), url('../fonts/PostNoBillsJaffna-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Reset Style */
+*,*:before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: unset;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+input,button{
+    background-color: unset;
+    border: unset;
+    outline: unset;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+body{
+    font-family: 'PT Sans';
+    background: #000;
+}
+
+/* Container */
+
+.container{
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* Header */
+.header__top{
+    background: #000;
+}
+
+.header__info{
+    padding: 14px 0;
+}
+
+.header__inner{
+    background: #0F0F0F;
+    height: 80px;
+}
+
+.header__logo{
+    padding: 15px 0 0 0;
+}
+
+.header__inner__content{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+/* Info */
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__leftSide{
+    display: flex;
+}
+
+.info__item{
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    margin-right: 12px;
+    line-height: 10px;
+}
+
+.info__item:after{
+    content: "";
+    height: 70%;
+    width: 1px;
+    background-color: #969696;
+    margin-left: 12px;
+}
+
+.info__item:last-child{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.info__item:last-child::after{
+    content: "";
+    height: 0;
+    width: 0;
+    margin-left: 0;
+}
+
+.phoneIcon{
+    line-height: 0;
+    margin-right: 15px;
+}
+
+.item__text{
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #969696;
+}
+
+.logInIcon{
+    margin-right: 10px;
+}
+
+/* Logo */
+.logo{
+    font-family: 'Post No Bills Jaffna';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+
+    color: #FFFFFF;
+}
+
+/* Nav */
+.nav{
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.nav__list{
+    height: 100%;
+    display: flex;
+}
+
+.list__item{
+    height: 100%;
+    padding: 31px 20px;
+    background: none;
+    transition: background 0.3s linear;
+}
+
+.list__item:hover{
+    background: #1f1f1f;
+    transition: background 0.3s linear;
+}
+
+.list__item p{
+
+    text-transform: uppercase;
+
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.nav.active{
+    width: 100vw;
+    height: 100vh;
+    background: #0F0F0F;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    display: block;
+    padding-top: 50px;
+}
+
+.nav.active .nav__list{
+    display: block;
+}
+
+.nav.active .list__item{
+    height: unset;
+    width: 100%;
+}
+
+.nav.active .list__item p{
+    text-align: center;
+}
+
+.nav.active .list__item{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* icon Burger Menu*/
+.icon__burger__menu{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 21px;
+    right: 0;
+    display: none;
+    z-index: 3;
+}
+
+.icon__burger__menu span, .icon__burger__menu span:before, .icon__burger__menu span:after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.icon__burger__menu span:before{
+    top: -9px;
+}
+
+.icon__burger__menu span{
+    top: 15px;
+}
+
+.icon__burger__menu span:after{
+    top: 8px;
+}
+
+.icon__burger__menu.active span::before{
+    top: 0;
+}
+
+.icon__burger__menu.active span{
+    top: 14px;
+    transform: rotate(45deg);
+}
+
+.icon__burger__menu.active span:after{
+    top: -2px;
+    transform: rotate(90deg);
+    left: 0;
+}
+
+
+/* Intro */
+.intro{
+    background: url('../image/bg-first-block.jpg') no-repeat center top /cover;
+    padding-top: 160px;
+    padding-bottom: 154px;
+}
+
+.intro__block__title{
+    width: 320px;
+    height: 320px;
+    border: 4px solid white;
+    margin: 0 auto;
+    padding-top: 110px;
+}
+
+.intro__title{
+    font-family: 'Post No Bills Jaffna';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    line-height: 53px;
+
+    color: #FFFFFF;
+}
+
+.intro__supTitle{
+    font-family: 'PT Sans';
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.intro__underLine{
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+
+.intro__description{
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    max-width: 730px;
+    color: #fff;
+
+    margin: 80px auto 0;
+}
+
+/* underLine */
+.underLine{
+    width: 179px;
+    height: 2px;
+    background: #fff;
+}
+
+/* Section */
+section{
+    display: block;
+}
+
+.blockTwoSection{
+    display: flex;
+}
+
+.section__title{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.section__title .another__font{
+    font-weight: 400;
+}
+
+.section__season{
+    background-color: #000;
+    padding: 93px 0;
+    width: 1040px;
+}
+
+.section__colection{
+    width: 880px;
+    background: url(../image/bg-right.jpg) no-repeat center top /cover;
+    padding-top: 484px;
+}
+
+.section__line{
+    width: 120px;
+    background: #fff;
+    height: 1px;
+    margin: 50px auto 0;
+}
+
+.section__button{
+    border: 1px solid #fff;
+    padding: 12px 28px;
+
+    font-family: 'PT Sans';
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin: 30px auto 0;
+
+    transition: background 0.3s linear, color 0.3s linear, border 0.3s linear;
+}
+
+.section__button:hover{
+    border-color: #000;
+    background: white;
+    color: black;
+    transition: background 0.3s linear, color 0.3s linear, border 0.3s linear;
+}
+
+.section__colection .section__line{
+    margin-top: 20px;
+}
+
+.section__image .image{
+    width: 880px;
+    line-height: 0;
+}
+
+.section__colection__2018{
+    background: #000;
+    width: 1040px;
+    padding-top: 100px;
+}
+
+.section__colection__2018 .section__title{
+    font-weight: 400;
+}
+
+.section__colection__2018 .section__line{
+    margin-top: 40px;
+}
+
+.section__catalog{
+    padding-top: 120px;
+    padding-bottom: 110px;
+    background: #000;
+}
+
+.section__catalog .section__line{
+    margin-top: 40px;
+}
+
+.section__brands{
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    background-color: #0f0f0f;
+}
+
+
+/* Product */
+.product{
+    width: 260px;
+}
+
+.product__image{
+    background: #191B1C;
+    padding: 55px 22px 56px 23px;
+    line-height: 0;
+}
+
+.product__title{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    color: #fff;
+    margin: 25px 0 10px 0;
+}
+
+.product__price{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+
+    color: #D0D0D0;
+}
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Season */
+.season__products{
+    max-width: 880px;
+    margin: 50px auto 0;
+    
+}
+
+/* Catalog */
+.catalog__products{
+    margin-top: 81px;
+    max-width: 1109px;
+}
+
+.catalog__products .product{
+    margin-bottom: 40px;
+}
+
+/* Brands */
+.brands{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1101px;
+}
+
+/* Footer */
+.footer__info{
+    background: url(../image/bg-footer.jpg) no-repeat top center /cover;
+    padding-top: 80px;
+    padding-bottom: 101px;
+}
+
+.footer__info__inner{
+    display: flex;
+}
+
+.footer__about{
+    margin-right: 31px;
+}
+
+.footer__title{
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.footer__desc{
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    max-width: 350px;
+}
+
+.footer__category{
+    margin-right: 92px;
+}
+
+.footer__button{
+    padding: 10px 20px;
+    background-color: #0f0f0f;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #d0d0d0;
+    margin: 0 20px 20px 0;
+}
+
+.footer__group__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 287px;
+}
+
+.footer__button--margin{
+    margin-right: 0;
+}
+
+.footer__form{
+    margin-top: 37px;
+}
+
+.form form{
+    display: flex;
+}
+
+.form input{
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #969696;
+    padding: 10px 0 11px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    width: 210px;
+    height: 42px;
+}
+
+.form input::placeholder{
+    color: #969696;
+}
+
+.footer__button--color{
+    color: #fff;
+    letter-spacing: 0.05em;
+    position: relative;
+    top: 1px;
+    height: 41px;
+}
+
+.footer__copyright{
+    background: #0F0F0F;
+    padding: 17px 0;
+}
+
+.footer__copyright__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 12px;
+    color: #D0D0D0;
+}
+
+.copyright--info{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media(max-width:1550px) {
+    .blockTwoSection{
+        display: block;
+    }
+
+    .blockTwoSection section{
+        width: 100%;
+    }
+
+    .section__colection{
+        height: 550px;
+        padding: 205px 0 0 0;
+    }
+
+    .section__image{
+        padding-top: 50px;
+    }
+
+    .section__image .image{
+        margin: 0 auto;
+    }
+
+    .section__season{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .product{
+        margin-bottom: 20px;
+
+    }
+}
+
+@media(max-width: 1200px){
+    .container{
+        padding: 0 15px;
+    }
+
+    .info__leftSide{
+        flex-wrap: wrap;
+
+    }
+
+    .info__leftSide .info__item{
+        margin: 5px 0;
+        
+    }
+
+    .info__leftSide .info__item:after{
+        display: none;
+
+    }
+
+    .section__image .image{
+        max-width: 800px;
+        width: unset;
+    }
+
+    .section__image .image img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 1080px){
+    .brands{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__info__inner{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__about{
+        width: 50%;
+        margin: 0;
+    }
+
+    .footer__category{
+        width: 50%;
+        margin: 0;
+    }
+
+    .footer__newsletter{
+        margin-top: 50px;
+
+    }
+
+    .footer__title{
+        text-align: center;
+        
+    }
+
+    .footer__desc{
+        margin: 0 auto; 
+    }
+
+    .footer__group__buttons{
+        margin: 0 auto; 
+    }
+
+    .footer__form{
+        margin: 20px auto;
+    }
+}
+
+@media(max-width: 730px){
+    .nav{
+        display: none;
+    }
+
+    .icon__burger__menu{
+        display: block;
+    }
+
+    .footer__about{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 600px){
+    .info__leftSide .info__item {
+        display: none;
+    }
+
+    .info__leftSide .info__item:last-child {
+        display: flex;
+    }
+
+    .header__info{
+        align-items: center;
+    }
+
+    .intro__block__title{
+        width: 240px;
+        height: 240px;
+        padding-top: 72px;
+
+    }
+
+    .intro__block__title h1{
+        font-size: 36px;
+    }
+
+    .intro__underLine{
+        width: 100px;
+    }
+
+    .intro__supTitle{
+        font-size: 18px;
+    }
+
+    .intro{
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .season__products{
+        justify-content: center;
+
+    }
+
+    .product .product__image{
+        width: 170px;
+        height: 200px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .product .product__image img{
+        width: 145px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    .product .product__title, .product__price{
+        text-align: center;
+    }
+
+    .catalog__products{
+        justify-content: center;
+    }
+
+    .footer__group__buttons{
+        width: unset;
+        justify-content: center;
+    }
+
+    .footer__button{
+        margin-right: 10px;
+    }
+
+    .footer__category{
+        width: 100%;
+    }
+
+
+}   
+
+@media(max-width: 460px){
+    .intro__description{
+        font-size: 11px;
+    }
+
+    .footer__form form{
+        display: block;
+    }
+
+    .form input{
+        width: 100%;
+    }
+
+    .form button{
+        width: 100%;
+    }
+
+    .section__title{
+        font-size: 23px;
+    }
+
+    .section__season, .section__colection__2018, .section__catalog{
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .section__colection{
+        background-position: left;
+    }
+}
